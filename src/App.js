@@ -11,10 +11,10 @@ class App extends Component {
             return `(${input})`;
         }
         if (input.length >3 && input.length <=6){
-            return `(${input.slice(0,3)}) ${input.slice(3)}`
+            return `(${input.slice(0,3)}) ${input.slice(3)}`;
         }
         if (input.length >6 && input.length <=10){
-            return `(${input.slice(0,3)}) ${input.slice(3,6)}-${input.slice(6)}`
+            return `(${input.slice(0,3)}) ${input.slice(3,6)}-${input.slice(6)}`;
         }
         else return input;
     }
@@ -34,12 +34,12 @@ class App extends Component {
         if(isNaN(char)){
             return;
         }
-        this.setState({formattedInput:this.formatInput(this.state.phoneInput.slice(2) + char)})
+        this.setState({formattedInput:this.formatInput(this.state.phoneInput.slice(2) + char)});
 
         if(this.state.phoneInput === ""){
-            char = `+1${char}`
+            char = `+1${char}`;
         }
-        this.setState({phoneInput:this.state.phoneInput + char})
+        this.setState({phoneInput:this.state.phoneInput + char});
     }
 
 
